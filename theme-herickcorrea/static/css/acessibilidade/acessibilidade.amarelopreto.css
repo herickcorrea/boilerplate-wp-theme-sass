@@ -1,0 +1,127 @@
+html body {
+  background: #000000 !important;
+  background: #000000;
+}
+html body a:not(.noFilterAP) {
+  text-decoration: underline;
+  color: #ffff00 !important;
+  background: #000000 !important;
+  border-color: #ffffff !important;
+}
+html body a:not(.noFilterAP):before {
+  color: #ffff00 !important;
+}
+html body a:not(.noFilterAP) span {
+  color: #ffff00 !important;
+}
+html body a:not(.noFilterAP):link,
+html body a:not(.noFilterAP):visited,
+html body a:not(.noFilterAP):hover {
+  text-decoration: underline;
+  color: #ffff00 !important;
+  background: #000000 !important;
+  border-color: #ffffff !important;
+}
+html body a:not(.noFilterAP):link:before,
+html body a:not(.noFilterAP):visited:before,
+html body a:not(.noFilterAP):hover:before {
+  color: #ffff00 !important;
+}
+html body a:not(.noFilterAP):link span,
+html body a:not(.noFilterAP):visited span,
+html body a:not(.noFilterAP):hover span {
+  color: #ffff00 !important;
+}
+html body a:not(.noFilterAP):before {
+  border-color: #000000 !important;
+}
+html body p:not(.noFilterAP),
+html body b:not(.noFilterAP),
+html body li:not(.noFilterAP),
+html body ul:not(.noFilterAP),
+html body div:not(.noFilterAP),
+html body td:not(.noFilterAP),
+html body tr:not(.noFilterAP),
+html body h1:not(.noFilterAP),
+html body h2:not(.noFilterAP),
+html body h3:not(.noFilterAP),
+html body h4:not(.noFilterAP),
+html body h5:not(.noFilterAP),
+html body h6:not(.noFilterAP),
+html body span:not(.noFilterAP),
+html body label:not(.noFilterAP),
+html body button:not(.noFilterAP),
+html body section:not(.noFilterAP),
+html body header:not(.noFilterAP),
+html body footer:not(.noFilterAP),
+html body article:not(.noFilterAP),
+html body aside:not(.noFilterAP) {
+  color: #ffffff !important;
+  background: #000000;
+  border-color: #ffffff !important;
+}
+html body input[type='text'],
+html body select[type='text'] {
+  border: 1px solid #ffffff !important;
+}
+html body input:not(.noFilterAP),
+html body select:not(.noFilterAP) {
+  color: #ffffff !important;
+  background: #000000 !important;
+  border-color: #ffffff !important;
+}
+html body a:link,
+html body a:visited {
+  text-decoration: underline;
+  color: #ffff00;
+}
+html body div:before,
+html body h1:before,
+html body h2:before,
+html body h3:before {
+  background: transparent;
+}
+html body div:after,
+html body h1:after,
+html body h2:after,
+html body h3:after {
+  background: transparent;
+}
+html body input[type='radio']:empty ~ label:before {
+  background: #000000 !important;
+}
+html body input[type='radio']:checked ~ label:before {
+  background: #ffffff !important;
+}
+html body div:not(.noFilterAP):not([id=""]):not([style^="background-image:url"]),
+html body section:not(.noFilterAP):not([id=""]):not([style^="background-image:url"]),
+html body nav:not(.noFilterAP):not([id=""]):not([style^="background-image:url"]) {
+  background: #000000 !important;
+}
+html body div:not(.noFilterAP):not([id=""]):not([style^="background-image:url"]) input,
+html body section:not(.noFilterAP):not([id=""]):not([style^="background-image:url"]) input,
+html body nav:not(.noFilterAP):not([id=""]):not([style^="background-image:url"]) input,
+html body div:not(.noFilterAP):not([id=""]):not([style^="background-image:url"]) button,
+html body section:not(.noFilterAP):not([id=""]):not([style^="background-image:url"]) button,
+html body nav:not(.noFilterAP):not([id=""]):not([style^="background-image:url"]) button {
+  background: #000000 !important;
+}
+html body li:hover:not([style^="background-image:url"]) {
+  background: #000000 !important;
+}
+
+#BarraAcessibilidade ul.acessList .wrapContraste select {color: black !important;}
+#BarraAcessibilidade ul.acessList .wrapContraste select option:checked,
+#BarraAcessibilidade ul.acessList .wrapContraste select option:hover {
+    box-shadow: 0 0 10px 100px #ff0 inset !important;;
+}
+
+
+#CBarraAcessibilidade ul.acessList .wrapContraste select option {background: #000000; color: #ff0;}
+#CBarraAcessibilidade ul.acessList .wrapContraste select option:hover {background: #ff0; color: #000;}
+
+#CBarraAcessibilidade svg path {fill:#fff}
+
+.CCBuscaGeral form div.input {border-bottom: 1px solid #ff0 !important;}
+.CCBuscaGeral form div.input i {color: #ff0 !important;}
+.CCBuscaGeral form div.input input {color:#fff !important; background: transparent !important;}

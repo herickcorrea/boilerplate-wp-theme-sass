@@ -1,0 +1,13 @@
+html body {
+  background-color: #000 !important;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+html body .noFilter {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.CCBuscaGeral form div.input {border-bottom: 1px solid #000 !important;}
+.CCBuscaGeral form div.input i {color: #000 !important;}
+.CCBuscaGeral form div.input input {color:#000 !important; background: transparent !important;}

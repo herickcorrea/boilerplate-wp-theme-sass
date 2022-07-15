@@ -1,0 +1,10 @@
+html body {
+  filter: contrast(1.5);
+  -webkit-filter: contrast("1.5");
+}
+html body img,
+html body iframe,
+html body video {
+  filter: contrast(1);
+  -webkit-filter: contrast(1);
+}

@@ -1,0 +1,22 @@
+html body {
+  background-color: #000 !important;
+  filter: invert(100%) grayscale(100%);
+  -webkit-filter: invert(100%) grayscale(100%);
+}
+html body a {
+  text-decoration: underline;
+}
+html body img:not(.noFilterCI),
+html body iframe:not(.noFilterCI),
+html body video:not(.noFilterCI),
+html body .noFilter {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+#CBarraAcessibilidade img.contraste,
+#CBarraAcessibilidade img.sitemap {filter: brightness(0.5) !important;}
+
+.CCBuscaGeral form div.input {border-bottom: 1px solid #000 !important;}
+.CCBuscaGeral form div.input i {color: #000 !important;}
+.CCBuscaGeral form div.input input {color:#000 !important; background: transparent !important;}

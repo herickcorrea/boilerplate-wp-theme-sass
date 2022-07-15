@@ -1,0 +1,62 @@
+// VARIÁVEIS GLOBAIS
+
+/* ************************
+CORES
+************************ */
+
+$azul_100 : #1D56CA;
+$azul_300 : #16419A;
+$azul_500 : #102D68;
+$azul_700 : #0B2251;
+$azul_900 : #081736;
+
+$verdeClaro_100 : #47EAFE;
+$verdeClaro_300 : #01C2D9;
+$verdeClaro_500 : #009CAD;
+$verdeClaro_700 : #007987;
+$verdeClaro_900 : #004D56;
+
+$verde_100 : #D1FFB6;
+$verde_300 : #A7EA81;
+$verde_500 : #8ECC6A;
+$verde_700 : #62A33D;
+$verde_900 : #4D8D29;
+
+$cinza_100 : #9C9C9C;
+$cinza_300 : #5E5D5F;
+$cinza_500 : #303030;
+$cinza_700 : #202020;
+$cinza_900 : #101010;
+
+/* ************************
+BREAKPOINTS
+************************ */
+
+// BOOTSTRAP
+
+$xs: 565px;
+$sm: 567px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1440px;
+
+$tablet_inicio: 1024px;
+$tablet_fim: 992px;
+
+$mobile_inicio: 991px;
+
+$mobile_landscape: 767px;
+$mobile_portrait: 567px;
+
+$mobile_galaxy: 360px;
+$mobile_iphone5s: 320px;
+
+
+/* ************************
+ANIMAÇÕES
+************************ */
+
+$transition_rapido: 200ms;
+$transition_normal: 400ms;
+$transition_lento: 800ms;

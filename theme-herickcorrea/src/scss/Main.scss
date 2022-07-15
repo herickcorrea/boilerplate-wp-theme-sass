@@ -1,0 +1,22 @@
+// @import './bootstrap5/bootstrap-utilities.scss';
+@import './bootstrap5/bootstrap-grid.scss';
+@import './Globals.scss';
+@import './Typography.scss';
+@import './Library.scss';
+
+body {background: #fff; @include font;}
+
+@media screen and (min-width:1440px)
+{
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {max-width: 1390px;}
+}
+
+/*
+*****************************
+COMPONENTES
+*****************************
+*/
+
+@import '../../components/template/acessibilidade/acessibilidade.scss';
+@import '../../components/template/header/header.scss';
+@import '../../components/template/footer/footer.scss';

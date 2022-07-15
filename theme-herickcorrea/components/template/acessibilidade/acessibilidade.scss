@@ -1,0 +1,93 @@
+#CBarraAcessibilidade 
+{
+    position: absolute; top: 0; left: 0; z-index: 5; width: 100%; height: 34px; background-color: #eeeeee; font-family: 'Arial','Helvetica','sans-serif'; font-size: 14px;
+
+    .flexBar {display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center; width: 100%;}
+
+    img {display: inline-block; vertical-align: middle; position: relative; z-index: 0; top: -1px; height: auto;}
+    img.livro {width: 13px; margin-right: 4px;}
+    img.contraste {width: 16px;}
+    img.sitemap {width: 19px;}
+
+    dl, ol, ul {margin: 0; padding: 0;}
+
+    button {border: 0;}
+
+    svg
+    {
+        display: inline-block; width: 16px; height: auto; position: relative; top: -2px;
+
+        path {fill: #555;}
+
+        &#svgContrast.amarelopreto path {fill: #555;}
+        &#svgLivroAcessivel {width: 12px; top: -1px;}
+    }
+
+    ul:not(.select_options)
+    {
+        li
+        {
+            display: inline-block; padding:4px 5px; position: relative; vertical-align: middle;
+
+            &:first-child {padding-left:0;}
+            &:last-child {padding-right:0;}
+
+            a, button
+            {
+                display: block; height:26px; font-family: Arial, Helvetica, sans-serif; line-height: 26px; font-size: 14px; padding:0 4px; color: #555555;
+            }
+        }
+    }
+
+    ul.acessList
+    {
+        text-align: right;
+
+        li
+        {
+            position: relative; 
+
+            &.zoomButtons button {font-size: 17px; font-weight: 700;}
+
+            &.libras {position: relative; top:-1px;}
+            &.libras img {max-width: 26px; height: auto;}
+
+            &.livro a:hover {text-decoration: none;}
+            &.livro a:hover span {text-decoration: underline;}
+        }
+
+        #wrapContraste
+        {
+            position: relative; min-width: 30px; text-align: center;
+
+            a.contraste {width:30px; height: 26px; line-height: 26px;}
+            a.contraste img {position: relative; top: -2px;}
+
+            #select_options
+            {
+                position: absolute; right: 0; background: #eeeeee; width: 240px; text-align: left; overflow: hidden; display: none;
+
+                &.opened {display: block;}
+
+                li
+                {
+                    border-top: 1px solid #555; display: block; padding:0;
+
+                    &:focus-within {outline: 0;}
+
+                    button {display: block; height: 34px; line-height: 34px; font-size: 13px; font-weight: 600; padding:0 7px; font-weight: 700; width: 100%; text-align: left;}
+                    button:focus {border:2px solid #000; outline: none;}
+                }
+            }
+        }        
+    }
+
+    @media screen and (max-width:991px)
+    {
+        ul li.zoomButtons {display: none;}
+        ul.acessList
+        {
+            li.livro {display: none;}
+        }
+    }
+}

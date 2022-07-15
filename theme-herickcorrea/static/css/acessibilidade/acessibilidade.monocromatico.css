@@ -1,0 +1,7 @@
+html body {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+html body a {
+  text-decoration: underline;
+}

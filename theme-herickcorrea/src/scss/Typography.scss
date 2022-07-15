@@ -1,0 +1,55 @@
+@import './Fonts.scss';
+
+/*
+FONTS - ROBOTO
+300,400,500,700,900
+*/
+
+@mixin font($size : 16px, $weight : 400, $lineHeight : normal, $cor : $cinza_500, $style : normal, $upper : none)
+{
+    font-family:'Roboto', sans-serif;
+    font-size:$size;
+    font-weight:$weight;
+    line-height:$lineHeight;
+    color:$cor;
+    font-style:$style;
+    text-transform:$upper;
+}
+
+.Typography
+{
+    font-family:'Roboto', sans-serif; color: $cinza_500;
+
+    .H1 {font-size: 60px; line-height: 60px; font-weight: 300;} 
+    .HB1 {font-size: 60px; line-height: 60px; font-weight: 500;} 
+
+    .H2 {font-size: 40px; line-height: 50px;font-weight: 300;} 
+    .HB2 {font-size: 46px; line-height: 50px; font-weight: 500;} 
+
+    .H3 {font-size: 30px; line-height: 38px; font-weight: 300;} 
+    .HB3 {font-size: 30px; line-height: 38px; font-weight: 500;} 
+    .HBB3 {font-size: 38px; line-height: 40px; font-weight: 700;} 
+
+    .H4L {font-size: 20px; line-height: 20px; font-weight: 300;} 
+    .H4 {font-size: 20px; line-height: 20px; font-weight: 400;} 
+    .HB4 {font-size: 20px; line-height: 20px; font-weight: 500;} 
+
+    .H5 {font-size: 18px; line-height: 30px; font-weight: 300;} 
+    .HB5 {font-size: 18px; line-height: 30px; font-weight: 500;}
+
+    .TR {font-size: 16px; line-height: 24px; font-weight: 400;} 
+    .TM {font-size: 16px; line-height: 24px; font-weight: 500;} 
+    .TB {font-size: 16px; line-height: 20px; font-weight: 700;}
+
+    .XR {font-size: 15px; line-height: 22px; font-weight: 400;} 
+    .XSB {font-size: 15px; line-height: 22px; font-weight: 500;} 
+    .XB {font-size: 15px; line-height: 18px; font-weight: 700;}
+
+    .XXR {font-size: 14px; line-height: 20px; font-weight: 400;} 
+    .XXB {font-size: 14px; line-height: 16px; font-weight: 700;} 
+
+    .XXXR {font-size: 13px; line-height: 15px; font-weight: 400;} 
+
+    .SR {font-size: 13px; line-height: 18px; font-weight: 400;} 
+    .SM {font-size: 13px; line-height: 18px; font-weight: 500;} 
+}
