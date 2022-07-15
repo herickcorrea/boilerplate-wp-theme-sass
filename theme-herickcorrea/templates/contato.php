@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home
+ * Template Name: Contato
  * Template Post Type: page
  *
  * @package WordPress
@@ -17,7 +17,7 @@ get_template_part( 'components/template/header/header' );
 <!-- INÍCIO DO CONTEÚDO -->
 
 <section>
-    <h2>HOME 2</h2>
+    <h2>AÇÕES DETALHE</h2>
     <?php the_content(); ?>
 </section>
 

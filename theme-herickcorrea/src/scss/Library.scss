@@ -71,7 +71,7 @@ hr {display:none;}
     width:$size;
     height:$size;
     background:$cor;
-    border-radius:10px;
+    border-radius:$borderRadius_medio;
     position:absolute;
     left:0;
     margin-top:$top;
@@ -81,7 +81,17 @@ hr {display:none;}
 
 .btn
 {
-    @include font(13px,500,auto,#fff,normal,uppercase); display: inline-flex; flex-flow: row nowrap; justify-content: center; align-items: center; padding:0 20px; background: $azul_100;
+    @include font(13px,500,auto,#fff,normal,uppercase); 
+    display: inline-flex; 
+    flex-flow: row nowrap; 
+    justify-content: center; 
+    align-items: center; 
+    padding:0 20px; 
+    max-width: 100%;
+    background: $azul_100; 
+    cursor: pointer; transition: $transition_normal;
+
+    svg path, svg circle, svg polygon {transition: $transition_normal;}
 
     &.Solid
     {
@@ -104,12 +114,14 @@ hr {display:none;}
         &.Cinza_700 {background-color: $cinza_700;}
         &.Cinza_900 {background-color: $cinza_900;}
 
+        &.White {background: #fff; color: $azul_500;}
+
         &:hover {box-shadow:0 0 5px rgba(0,0,0,0.2); filter: brightness(120%);}
     }
 
     &.Outline
     {
-        background:transparent; border:2px solid #fff; color:#fff; text-transform:none; height: 50px; border-radius: 20px;
+        background:transparent; border:2px solid #fff; color:#fff; height: 50px; border-radius: $borderRadius_grande;
 
         &.Azul_100 {border-color: $azul_100; &:hover {background-color: $azul_100;}}
         &.Azul_300 {border-color: $azul_300; &:hover {background-color: $azul_300;}}
@@ -128,17 +140,33 @@ hr {display:none;}
 
         &.Cinza_500 {border-color: $cinza_500; &:hover {background-color: $cinza_500;}}
         &.Cinza_700 {border-color: $cinza_700; &:hover {background-color: $cinza_700;}}
-        &.Cinza_900 {border-color: $cinza_900; &:hover {background-color: $cinza_900;}}        
+        &.Cinza_900 {border-color: $cinza_900; &:hover {background-color: $cinza_900;}}  
     }
 
-    &.Small {height: 30px; border-radius: 10px;}
-    &.Medium {height: 40px; border-radius: 10px;}
-    &.Big {height: 50px; border-radius: 10px;}
+    &.Small {height: 30px; border-radius: $borderRadius_medio;}
+    &.Medium {height: 40px; border-radius: $borderRadius_medio;}
+    &.Big {height: 50px; border-radius: $borderRadius_medio;}
 
     &.icon-left svg {margin-right: 10px;}
     &.icon-right svg {margin-left: 10px;}
+    &.icon-both
+    {
+        padding:0 5px;
 
-    &.Capsula {border-radius: 100px;}
+        svg {margin:0 15px;}
+    }
+
+    &.Capsula {border-radius: 100px; height: 36px;}
+}
+
+.socialList
+{
+    display: inline-flex; flex-flow: row nowrap; justify-content: flex-start; align-items: center;
+
+    li {padding: 0 33px 0 0;}
+    li:last-child {padding: 0;}
+    li a {display: block; transition: $transition_normal;}
+    li a:hover {opacity: 0.7;}
 }
 
 /*

@@ -45,7 +45,7 @@
 				<div class="row d-flex justify-content-between align-items-center">
 					<div class="left-content col order-2 d-flex justify-content-end align-items-center">
 						<div id="mainSearch" class="busca">
-							<button title="Abrir busca">
+							<button title="Abrir busca" class="btn busca Small Outline VerdeClaro_500 Capsula">
 								<?php svg('lupa', array()); ?>
 							</button>
 						</div>
@@ -58,10 +58,10 @@
 					</div>
 					<div class="right-content col order-1 align-items-end">
 						<h3 class="hide">Nossas Redes</h3>
-						<ul role="list" aria-label="Lista de redes sociais">
-							<li role="listitem">facebook</li>
-							<li role="listitem">instagram</li>
-							<li role="listitem">linkedin</li>
+						<ul class="socialList" role="list" aria-label="Lista de redes sociais">
+							<li role="listitem"><a href="#" title="Visitar perfil no facebook: link externo" target="_blank" rel="nofollow"><?php svg('facebook', array()); ?></a></li>
+							<li role="listitem"><a href="#" title="Visitar perfil no instagram: link externo" target="_blank" rel="nofollow"><?php svg('instagram', array()); ?></a></li>
+							<li role="listitem"><a href="#" title="Visitar perfil no linkedin: link externo" target="_blank" rel="nofollow"><?php svg('linkedin', array()); ?></a></li>
 						</ul>
 					</div>
 				</div>
