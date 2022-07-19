@@ -33,6 +33,7 @@
  *
  * @since Twenty Twenty 1.0
  */
+
 function twentytwenty_theme_support() {
 
 	// Add default posts and comments RSS feed links to head.
@@ -60,10 +61,11 @@ function twentytwenty_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Set post thumbnail size.
-	set_post_thumbnail_size( 1200, 9999 );
+	// set_post_thumbnail_size( 1200, 9999 );
 
 	// Add custom image size used in Cover Template.
-	add_image_size( 'twentytwenty-fullscreen', 1980, 9999 );
+	add_image_size( 'bannerhome-desktop', 1920, 650 );
+	add_image_size( 'bannerhome-mobile', 991, 1060 );
 
 	// Custom logo.
 	$logo_width  = 120;
@@ -888,13 +890,12 @@ REGISTRAR ESTILOS E JS
 
 function regScriptsAndCSS()
 {
-	$version = ( $_SERVER['HTTP_HOST'] == 'http://http://localhost:3000/' ) ? date("m.d.y.H.i.s") : 'producao';
+	$version = ( $_SERVER['HTTP_HOST'] == 'http://localhost:3000/' || $_SERVER['HTTP_HOST'] == 'http://localhost:5010/' ) ? date("m.d.y.H.i.s") : 'producao';
 
 	// Adiciona no Topo
 
-	// wp_enqueue_style('fancybox-bundle-style', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css','','');
-	// wp_enqueue_style('swiper-bundle-css', get_stylesheet_directory_uri().'/css/swiper-bundle.min.css','','');
-	// wp_enqueue_style('bootstrap5-style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css','','');
+	wp_enqueue_style('fancybox-bundle-style', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css','','');
+	wp_enqueue_style('swiper-bundle-css', 'https://unpkg.com/swiper@8/swiper-bundle.min.css','','');
 	wp_enqueue_style('template-css-style', get_stylesheet_directory_uri().'/static/css/template.min.css?v='.$version,'','');
 
 	// wp_dequeue_style( 'all', 'screen', 'handheld', 'print' );
@@ -903,9 +904,7 @@ function regScriptsAndCSS()
 
 	wp_deregister_script('jquery');
 	wp_enqueue_script('scripts-jquery', get_template_directory_uri().'/static/js/vendors/jquery-3.6.0.min.js','','', true);
-	// wp_enqueue_script('swiper-bundle-js', get_template_directory_uri().'/js/vendors/swiper-bundle.min.js','','', true);
-	// wp_enqueue_script('fancybox-bundle-js', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js','','', true);
-	// wp_enqueue_script('scripts-jquerymask-js', get_template_directory_uri().'/js/vendors/jquery.mask.min.js','','', true);
+	wp_enqueue_script('fancybox-bundle-js', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js','','', true);
 	wp_enqueue_script('scripts-barraacessibiliade', get_template_directory_uri().'/static/js/acessibilidade.js','','', true);
 	wp_enqueue_script('scripts-template', get_template_directory_uri().'/static/js/app.main.min.js?v='.$version,'','', true);
 }
@@ -926,8 +925,64 @@ add_filter( 'script_loader_tag', function ( $tag, $handle, $src )
 
 
 /*---------------------------------
+CTPs
+--------------------------------- */
+
+include get_theme_file_path().'/components/services/post_types/cpt_blog.php';
+include get_theme_file_path().'/components/services/post_types/cpt_noticia.php';
+include get_theme_file_path().'/components/services/post_types/cpt_release.php';
+include get_theme_file_path().'/components/services/post_types/cpt_publicacao.php';
+
+/* Remove Category de Imprensa */
+    
+function WP_remove_category()
+{
+	register_taxonomy('category', array());
+}
+add_action('init', 'WP_remove_category');
+
+/*---------------------------------
 FUNÇÕES PADRÕES
 --------------------------------- */
+
+function cleanTel($tel)
+{
+	$cleanTel = str_replace('(','',$tel);
+	$cleanTel = str_replace(')','',$cleanTel);
+	$cleanTel = str_replace('-','',$cleanTel);
+	$cleanTel = str_replace(' ','',$cleanTel);
+	return $cleanTel;
+}
+
+function format_the_title($str)
+{
+    $str = preg_replace('/(?:\*)([^*]*)(?:\*)/', '<strong>$1</strong>', $str);
+    //$str = preg_replace('/(?:_)([^_]*)(?:_)/', '<i>$1</i>', $str);
+    $str = preg_replace('/(?:~)([^~]*)(?:~)/', '<strike>$1</strike>', $str);
+    return $str;
+}
+
+function format_link_tel($str)
+{
+    $str = preg_replace('/(?:_)([^_]*)(?:_)/', '<a href="tel:$1">$1</a>', $str);
+	return $str;
+}
+function texto_limite($title,$maximo) {
+
+	$strNoHTML = preg_replace('/<[^>]*>/', '', $title);
+
+	if ( strlen($strNoHTML) > $maximo ) {
+		$continua = '...';
+	}
+	else
+	{
+		$continua = '';
+	}
+
+	$strNoHTML = mb_substr( $strNoHTML, 0, $maximo, 'UTF-8' );
+
+	return $strNoHTML.$continua;
+}
 
 function staticURL($objeto)
 {

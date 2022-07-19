@@ -1,29 +1,28 @@
 
 /* IMPORTAÇÕES */
 
-import TemplateScripts from './modules/Template.js';
-import HomeScripts from './pages/Home.js';
+import Template from './components/Template.js';
+import BannerHome from './components/BannerHome.js';
 
 /* INSTANCIA CLASSES */
 
-const template = new TemplateScripts;
-const home = new HomeScripts;
+const template = new Template;
+const bannerhome = new BannerHome;
 
 /* RUN EVENTOS HABILITANDO JQUERY */
 
 $(function()
 {
-    if ($("body.current-page-home").length > 0)
-    {
-        home.init();        
-    }
-
+    template.init();
+    bannerhome.init();
+        
     $(window).resize(function()
     {
+        bannerhome.init();
+        template.init(); 
     });
 
     window.onload = function()
     {   
-        template.init();
     }();
 });

@@ -10,15 +10,15 @@ get_header();
 get_template_part( 'components/template/header/header' );
 ?>
 
-<main id="mainContent" style="height:500px">
+<main id="mainContent">
 <?php if ( have_posts() ) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 <!-- INÍCIO DO CONTEÚDO -->
 
+<?php import_component('/components/genericos/banner-home/bannerhome', array()); ?>	
 <section>
-    <h2>HOME 2</h2>
-    <?php the_content(); ?>
+    HOME
 </section>
 
 <!-- FIM DO CONTEÚDO -->

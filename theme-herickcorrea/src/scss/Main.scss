@@ -11,7 +11,7 @@
 
 body {background: #fff; @include font;}
 
-main {padding-top: 143px}
+main {padding-top: 130px}
 
 /*
 *****************************
@@ -22,3 +22,4 @@ COMPONENTES
 @import '../../components/template/acessibilidade/acessibilidade.scss';
 @import '../../components/template/header/header.scss';
 @import '../../components/template/footer/footer.scss';
+@import '../../components/genericos/banner-home/bannerhome.scss';

@@ -1,12 +1,12 @@
 <?php
 /**
- * Template Name: Página Padrão
+ * Template Name: A Fundação Santillana
  * Template Post Type: page
  *
  * @package WordPress
  * @subpackage fundacaosantillana
  */
-
+get_header();
 get_template_part( 'components/template/header' );
 ?>
 
@@ -19,7 +19,8 @@ get_template_part( 'components/template/header' );
 		while ( have_posts() ) {
 			the_post();
 
-			get_template_part( 'template-parts/content-cover' );
+			echo '<h1>'.get_the_title().'</h1>';
+            echo '<h1>'.get_the_content().'</h1>';
 		}
 	}
 

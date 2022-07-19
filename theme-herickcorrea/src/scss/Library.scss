@@ -101,6 +101,7 @@ hr {display:none;}
         &.Azul_700 {background-color: $azul_700 ;}
         &.Azul_900 {background-color: $azul_900;}
 
+        &.VerdeClaro_100 {background-color: $verdeClaro_100;}
         &.VerdeClaro_300 {background-color: $verdeClaro_300;}
         &.VerdeClaro_500 {background-color: $verdeClaro_500;}
         &.VerdeClaro_700 {background-color: $verdeClaro_700;}
@@ -129,6 +130,7 @@ hr {display:none;}
         &.Azul_700 {border-color: $azul_700; &:hover {background-color: $azul_700 ;}}
         &.Azul_900 {border-color: $azul_900; &:hover {background-color: $azul_900;}}
 
+        &.VerdeClaro_100 {border-color: $verdeClaro_100; &:hover {background-color: $verdeClaro_100;}}
         &.VerdeClaro_300 {border-color: $verdeClaro_300; &:hover {background-color: $verdeClaro_300;}}
         &.VerdeClaro_500 {border-color: $verdeClaro_500; &:hover {background-color: $verdeClaro_500;}}
         &.VerdeClaro_700 {border-color: $verdeClaro_700; &:hover {background-color: $verdeClaro_700;}}

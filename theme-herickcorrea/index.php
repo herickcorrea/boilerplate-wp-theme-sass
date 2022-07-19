@@ -17,9 +17,9 @@
 // get_header();
 ?>
 
+<?php /*
 <main id="site-content">
 
-<?php /*
 	<?php
 
 	$archive_title    = '';
@@ -111,9 +111,9 @@
 
 	<?php get_template_part( 'template-parts/pagination' ); ?>
 
-	*/ ?>
 
 </main><!-- #site-content -->
+	*/ ?>
 
 <?php //get_template_part( 'template-parts/footer-menus-widgets' ); ?>
 

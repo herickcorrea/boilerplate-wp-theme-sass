@@ -54,11 +54,11 @@ function pagesJS()
 
 function modulesJS()
 {
-	return src(['./src/js/modules/*.js'])
+	return src(['./src/js/components/*.js'])
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
 		.pipe(sourcemaps.write('./'))
-		.pipe(dest('./static/js/modules'));
+		.pipe(dest('./static/js/components'));
 }
 
 /* OPTIMIZE IMAGENS */
@@ -103,7 +103,7 @@ function gulpWatch()
 		browserSync.reload();
 	});
 
-	watch(['./src/js/modules/*.js'], modulesJS).on('change',function()
+	watch(['./src/js/components/*.js'], modulesJS).on('change',function()
 	{
 		browserSync.reload();
 	});
